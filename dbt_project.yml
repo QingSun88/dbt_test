@@ -24,6 +24,12 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+vars:
+  ga4:
+    project: "dbt-project-357811"
+    dataset: "fyndiq_ga4"
+    start_date: "20230223" # Earliest date to load
+    frequency: "streaming" # daily|streaming|daily+streaming. See 'Export Frequency' below.
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
